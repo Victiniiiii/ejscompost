@@ -182,6 +182,15 @@ a {
   font-size: 2rem;
 }
 
+.compostspreadsheetcategory {
+  width: 15vw;
+  height: 8vh;
+  line-height: 8vh;
+  background-color: pink;
+  text-align: center;
+  border: 0.1vw solid black;
+  box-sizing: border-box;
+}
 .compostrectangle {
   width: 80vw;
   height: 80vh;
@@ -301,12 +310,19 @@ a {
   display: flex;
   flex-direction: row;
 }
+.upgraderowbig {
+  width: 80vw;
+  height: 8vh;
+  background-color: brown;
+  display: flex;
+  flex-direction: row;
+}
 
 .compostupgraderectangle {
   width: 80vw;
-  height: 143vh;
+  height: 148vh;
   background-color: white;
-  margin-bottom: 2vh;
+  margin-bottom: 5vh;
   margin-top: 2vh;
 }
 
@@ -323,6 +339,7 @@ a {
 .upgraderowmini {
   width: 15vw;
   height: 5vh;
+  line-height: 5vh;
   background-color: slateblue;
   text-align: center;
   border: 0.1vw solid black;
@@ -332,7 +349,17 @@ a {
 .upgraderowministart {
   width: 5vw;
   height: 5vh;
+  line-height: 5vh;
   background-color: chocolate;
+  text-align: center;
+  border: 0.1vw solid black;
+  box-sizing: border-box;
+}
+.upgraderowministartbig {
+  width: 5vw;
+  height: 8vh;
+  line-height: 8vh;
+  background-color: yellow;
   text-align: center;
   border: 0.1vw solid black;
   box-sizing: border-box;
@@ -341,6 +368,7 @@ a {
 .spreadsheettotal {
   width: 80vw;
   height: 3vh;
+  line-height: 3vh;
   background-color: darkslateblue;
   text-align: center;
   border: 0.1vw solid black;

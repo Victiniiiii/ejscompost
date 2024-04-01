@@ -696,7 +696,9 @@ async function compostspreadsheet() {
             default:
                 value = 0; // If 0 its broken
         }
-        const htmlSpreadsheet = `${value.toLocaleString()} coins`;
+
+        let compostpretext = i === 131 ? 'The cost of getting every single upgrade in the composter currently costs ' : '';
+        const htmlSpreadsheet = `${compostpretext}${value.toLocaleString()} coins`;
         document.getElementById(spreadsheetHtmlId).innerHTML = htmlSpreadsheet;
     }
 }
