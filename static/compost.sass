@@ -1,3 +1,20 @@
+$photo1: "../static/images/upgrade1.webp"
+$photo2: "../static/images/upgrade2.webp"
+$photo3: "../static/images/upgrade3.webp"
+$photo4: "../static/images/upgrade4.webp" 
+$photo5: "../static/images/upgrade5.webp"
+
+=photo($url)
+    background-image: url($url)
+    background-size: cover
+    background-repeat: no-repeat
+    width: 8vh
+    height: 8vh
+    line-height: 8vh
+    text-align: center
+    border: 0.1vw solid black
+    box-sizing: border-box
+
 .organicrow 
     width: 35vw
     height: 10vh
@@ -25,13 +42,37 @@
 
 .compost
     &spreadsheetcategory
-        width: 15vw
+        width: calc(15vw - 8vh)
         height: 8vh
         line-height: 8vh
         background-color: pink
         text-align: center
         border: 0.1vw solid black
         box-sizing: border-box
+
+        &photo
+            width: 8vh
+            height: 8vh
+            line-height: 8vh
+            background-color: pink
+            text-align: center
+            border: 0.1vw solid black
+            box-sizing: border-box
+
+            &1
+                +photo($photo1)
+
+            &2
+                +photo($photo2)
+
+            &3
+                +photo($photo3)
+
+            &4
+                +photo($photo4)
+
+            &5
+                +photo($photo5)
 
     &rectangle 
         width: 80vw

@@ -27,10 +27,74 @@
 }
 
 .compostspreadsheetcategory {
-  width: 15vw;
+  width: calc(15vw - 8vh);
   height: 8vh;
   line-height: 8vh;
   background-color: pink;
+  text-align: center;
+  border: 0.1vw solid black;
+  box-sizing: border-box;
+}
+.compostspreadsheetcategoryphoto {
+  width: 8vh;
+  height: 8vh;
+  line-height: 8vh;
+  background-color: pink;
+  text-align: center;
+  border: 0.1vw solid black;
+  box-sizing: border-box;
+}
+.compostspreadsheetcategoryphoto1 {
+  background-image: url("../static/images/upgrade1.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 8vh;
+  height: 8vh;
+  line-height: 8vh;
+  text-align: center;
+  border: 0.1vw solid black;
+  box-sizing: border-box;
+}
+.compostspreadsheetcategoryphoto2 {
+  background-image: url("../static/images/upgrade2.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 8vh;
+  height: 8vh;
+  line-height: 8vh;
+  text-align: center;
+  border: 0.1vw solid black;
+  box-sizing: border-box;
+}
+.compostspreadsheetcategoryphoto3 {
+  background-image: url("../static/images/upgrade3.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 8vh;
+  height: 8vh;
+  line-height: 8vh;
+  text-align: center;
+  border: 0.1vw solid black;
+  box-sizing: border-box;
+}
+.compostspreadsheetcategoryphoto4 {
+  background-image: url("../static/images/upgrade4.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 8vh;
+  height: 8vh;
+  line-height: 8vh;
+  text-align: center;
+  border: 0.1vw solid black;
+  box-sizing: border-box;
+}
+.compostspreadsheetcategoryphoto5 {
+  background-image: url("../static/images/upgrade5.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 8vh;
+  height: 8vh;
+  line-height: 8vh;
   text-align: center;
   border: 0.1vw solid black;
   box-sizing: border-box;
