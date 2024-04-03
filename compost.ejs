@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compost Profit Calculator</title>
+    <link rel="icon" href="static/images/vic32.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="static/compoststyles.css" media="screen and (min-width: 768px)">
+</head>
+<body>
+    <div class="title-section">
+        <a href="/">
+            <img class="main-menu-button" src="static/images/vicinti3.png" alt="Main Menu Button">
+        </a>
+        <h1 class="main-menu-text">Compost Profit Calculator</h1>
+        <div class="project-buttons">
+            <div class="category-button">
+                <a href="/projects">Projects</a>
+            </div>
+            <div class="category-button">
+                <a href="/contactme">Contact Me</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="compostrectangle">
+        <div class="composttoprectangle">
+            <div class="composttitletexts"> Your Upgrades </div>
+            <div class="composttitletexts"> Profits With The Next Upgrade </div>
+        </div> 
+        <div class="compostinsiderectangle">
+            <div class="compostleftrightrectangle">
+                <div class="compostrow">
+                    <label for="speedLevel">Composter Speed Level:</label>
+                    <input class="upgradeinputs" type="number" id="speedLevel" placeholder="Enter a value between 0 and 25" min="0" max="25" required>
+                </div>
+                <div class="compostrow">
+                    <label for="multiDropLevel">Multi Drop Level:</label>
+                    <input class="upgradeinputs" type="number" id="multiDropLevel" placeholder="Enter a value between 0 and 25" min="0" max="25" required>
+                </div>
+                <div class="compostrow">
+                    <label for="fuelCapLevel">Fuel Cap Level:</label>
+                    <input class="upgradeinputs" type="number" id="fuelCapLevel" placeholder="Enter a value between 0 and 25" min="0" max="25" required>
+                </div>
+                <div class="compostrow">
+                    <label for="orgMatterCapLevel">Organic Matter Cap Level:</label>
+                    <input class="upgradeinputs" type="number" id="orgMatterCapLevel" placeholder="Enter a value between 0 and 25" min="0" max="25" required>
+                </div>
+                <div class="compostrow">
+                    <label for="costReductionLevel">Cost Reduction Level:</label>
+                    <input class="upgradeinputs" type="number" id="costReductionLevel" placeholder="Enter a value between 0 and 25" min="0" max="25" required>
+                </div>
+            </div>
+            <div class="compostleftrightrectangle">
+                <div class="compostrow"><span id="upgradeResult1"></span></div>
+                <div class="compostrow"><span id="upgradeResult2"></span></div>
+                <div class="compostrow"><span id="upgradeResult3"></span></div>
+                <div class="compostrow"><span id="upgradeResult4"></span></div>
+                <div class="compostrow"><span id="upgradeResult5"></span></div>
+            </div>
+        </div>
+        <div class="compostbottomrectangle">
+            <button id="profitbutton" onclick="bazaarconnect()">Calculate Profit</button>
+            <div class="compostprofit" id="resultHour"></div>
+        </div>
+    </div>
+    <div class="compostrectangle">
+        <div id="economic1"> Most Economic Organic Matters and Fuels </div>
+        <div class="composttopeconomic">
+            <div class="composttitletexts"> Organic Matters </div>
+            <div class="composttitletexts"> Fuels </div>
+        </div>
+        <div class="compostinsiderectangle">
+            <div class="compostleftrightrectangle">
+                <div class="organicrow" id="organicRow1"></div>
+                <div class="organicrow" id="organicRow2"></div>
+                <div class="organicrow" id="organicRow3"></div>
+                <div class="organicrow" id="organicRow4"></div>
+                <div class="organicrow" id="organicRow5"></div>
+            </div>
+            <div class="compostleftrightrectangle">
+                <div class="fuelrow" id="fuelRow1"></div>
+                <div class="fuelrow" id="fuelRow2"></div>
+                <div class="fuelrow" id="fuelRow3"></div>
+            </div>
+        </div>
+    </div>
+    <div class="compostupgraderectangle">
+        <div class="compostupgradetitle">Composter Upgrades Spreadsheet</div>
+        <div class="upgraderowbig">
+            <div class="upgraderowministartbig">-</div>
+            <div class="compostspreadsheetcategory">Composter Speed</div>
+            <div class="compostspreadsheetcategoryphoto1"></div>
+            <div class="compostspreadsheetcategory">Multi Drop</div>
+            <div class="compostspreadsheetcategoryphoto2"></div>
+            <div class="compostspreadsheetcategory">Fuel Cap</div>
+            <div class="compostspreadsheetcategoryphoto3"></div>
+            <div class="compostspreadsheetcategory">Organic Matter Cap</div>
+            <div class="compostspreadsheetcategoryphoto4"></div>
+            <div class="compostspreadsheetcategory">Cost Reduction</div>
+            <div class="compostspreadsheetcategoryphoto5"></div>
+        </div>
+        <% for (let i = 1; i <= 25; i++) { %>
+            <div class="upgraderow">
+                <div class="upgraderowministart"><%= i %></div>
+                <div class="upgraderowmini" id="spreadsheet<%= i %>"></div>
+                <div class="upgraderowmini" id="spreadsheet<%= i + 25 %>"></div>
+                <div class="upgraderowmini" id="spreadsheet<%= i + 50 %>"></div>
+                <div class="upgraderowmini" id="spreadsheet<%= i + 75 %>"></div>
+                <div class="upgraderowmini" id="spreadsheet<%= i + 100 %>"></div>
+            </div>
+        <% } %>
+        <div class="upgraderow">
+            <div class="upgraderowministart">Total</div>
+            <div class="upgraderowmini" id="spreadsheet126"></div>
+            <div class="upgraderowmini" id="spreadsheet127"></div>
+            <div class="upgraderowmini" id="spreadsheet128"></div>
+            <div class="upgraderowmini" id="spreadsheet129"></div>
+            <div class="upgraderowmini" id="spreadsheet130"></div>
+        </div>
+        <div class="spreadsheettotal" id="spreadsheet131"></div>
+    </div>
+    <div class="compostfaq">
+        <div class="compostfaqtitletexts">Frequently Asked Questions</div>
+        <div class="compostfaqinbox">
+            <div class="compostfaqphoto"></div>
+            <div class="compostfaqtext">
+                <b>What is the Composter ?</b> <br /><br />
+                The Composter is a feature in Hypixel Skyblock that allows the player to create Compost. <br />
+                The Composter takes 10 minutes to create each Compost, consuming 4000 Organic Matter and 2000 Machine Fuel in the process. <br />
+                However, these values can be improved by upgrading the Composter.<br /><br />
+                <b>Why do people want more Compost ?</b><br /><br />
+                Compost can be exchanged for money in the bazaar, thus creating passive income for the Composter owner.<br />
+            </div>
+        </div>
+    </div>
+    <script src="/compost.js"></script>
+</body>
+</html>
