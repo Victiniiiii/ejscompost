@@ -154,34 +154,13 @@ a {
   flex-direction: row;
 }
 
-.organicrow {
-  width: 35vw;
-  height: 10vh;
+.compostprofit {
   margin-left: 2vw;
-  margin-top: 3vh;
-  font-size: 1.5rem;
-}
-
-.fuelrow {
-  width: 35vw;
-  height: 15vh;
-  margin-left: 2vw;
-  margin-top: 6vh;
-  font-size: 2rem;
-}
-
-#economic1 {
-  width: 80vw;
-  height: 5vh;
-  box-sizing: border-box;
-  background-color: lightblue;
-  border: 0.1vw solid black;
+  font-size: 1.05rem;
+  height: 3vh;
+  line-height: 3vh;
   text-align: center;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
 }
-
 .compostspreadsheetcategory {
   width: calc(15vw - 8vh);
   height: 8vh;
@@ -268,12 +247,7 @@ a {
 .composttitletexts {
   width: 40vw;
   height: 4vh;
-  font-size: 1.6rem;
-  text-align: center;
-}
-.compostfaqtitletexts {
-  width: 80vw;
-  height: 4vh;
+  line-height: 4vh;
   font-size: 1.6rem;
   text-align: center;
 }
@@ -326,38 +300,23 @@ a {
   flex-direction: row;
   align-items: center;
 }
-
-#profitbutton {
-  width: 10vw;
-  height: 4vh;
-  margin-left: 1vw;
-  font-size: 1.5rem;
-  background: white;
-  text-align: center;
-  border: 0.1vw solid black;
+.compostupgraderectangle {
+  width: 80vw;
+  height: 148vh;
+  background-color: white;
+  margin-bottom: 5vh;
+  margin-top: 2vh;
+}
+.compostupgradetitle {
+  width: 80vw;
+  height: 10vh;
+  line-height: 10vh;
+  background-color: maroon;
   box-sizing: border-box;
-}
-
-.compostprofit {
-  margin-left: 2vw;
-  font-size: 1.05rem;
-  height: 3vh;
+  border: 0.1vw solid black;
   text-align: center;
+  font-size: 4rem;
 }
-
-#composterForm {
-  display: flex;
-  flex-direction: column;
-  font-size: 3rem;
-}
-
-.upgradeinputs {
-  width: 35vw;
-  height: 5vh;
-  text-align: center;
-  font-size: 2rem;
-}
-
 .compostfaq {
   width: 80vw;
   height: 80vh;
@@ -365,6 +324,45 @@ a {
   border: 0.1vw solid black;
   box-sizing: border-box;
   margin-bottom: 2vh;
+  display: flex;
+  flex-direction: column;
+}
+.compostfaqtitletexts {
+  width: 80vw;
+  height: 4vh;
+  font-size: 1.6rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+.compostfaqinbox {
+  width: 80vw;
+  height: 76vh;
+  background: red;
+  border: 0.1vw solid black;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+.compostfaqtext {
+  width: 40vw;
+  height: 76vh;
+  line-height: 4vh;
+  background-color: darkkhaki;
+  box-sizing: border-box;
+  border: 0.1vw solid black;
+  font-size: 1.5rem;
+  padding: 2vw;
+}
+.compostfaqphoto {
+  width: 40vw;
+  height: 76vh;
+  background-color: yellow;
+  box-sizing: border-box;
+  border: 0.1vw solid black;
+  padding: 2vw;
+  background-image: url("../static/images/composter.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .upgraderow {
@@ -381,25 +379,6 @@ a {
   display: flex;
   flex-direction: row;
 }
-
-.compostupgraderectangle {
-  width: 80vw;
-  height: 148vh;
-  background-color: white;
-  margin-bottom: 5vh;
-  margin-top: 2vh;
-}
-
-.compostupgradetitle {
-  width: 80vw;
-  height: 10vh;
-  background-color: maroon;
-  box-sizing: border-box;
-  border: 0.1vw solid black;
-  text-align: center;
-  font-size: 4rem;
-}
-
 .upgraderowmini {
   width: 15vw;
   height: 5vh;
@@ -409,7 +388,6 @@ a {
   border: 0.1vw solid black;
   box-sizing: border-box;
 }
-
 .upgraderowministart {
   width: 5vw;
   height: 5vh;
@@ -429,6 +407,13 @@ a {
   box-sizing: border-box;
 }
 
+.upgradeinputs {
+  width: 35vw;
+  height: 5vh;
+  text-align: center;
+  font-size: 2rem;
+}
+
 .spreadsheettotal {
   width: 80vw;
   height: 3vh;
@@ -439,19 +424,54 @@ a {
   box-sizing: border-box;
 }
 
-.compostfaqtext {
-  width: 80vw;
-  height: 76vh;
-  background-color: darkkhaki;
-  box-sizing: border-box;
-  border: 0.1vw solid black;
-  font-size: 2.5rem;
-  padding: 2vw;
+#composterForm {
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
 }
 
-.blue-text {
-  color: blue;
-  font-weight: bold;
+#profitbutton {
+  width: 10vw;
+  height: 4vh;
+  margin-left: 1vw;
+  font-size: 1.5rem;
+  background: white;
+  text-align: center;
+  border: 0.1vw solid black;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+#profitbutton:hover {
+  background-color: #cccccc;
+}
+
+.organicrow {
+  width: 35vw;
+  height: 10vh;
+  margin-left: 2vw;
+  margin-top: 3vh;
+  font-size: 1.5rem;
+}
+
+.fuelrow {
+  width: 35vw;
+  height: 15vh;
+  margin-left: 2vw;
+  margin-top: 6vh;
+  font-size: 2rem;
+}
+
+#economic1 {
+  width: 80vw;
+  height: 5vh;
+  line-height: 5vh;
+  box-sizing: border-box;
+  background-color: lightblue;
+  border: 0.1vw solid black;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
 }
 
 ::-moz-placeholder {

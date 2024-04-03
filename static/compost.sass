@@ -15,32 +15,14 @@ $photo5: "../static/images/upgrade5.webp"
     border: 0.1vw solid black
     box-sizing: border-box
 
-.organicrow 
-    width: 35vw
-    height: 10vh
-    margin-left: 2vw
-    margin-top: 3vh
-    font-size: 1.5rem
+.compost    
+    &profit 
+        margin-left: 2vw
+        font-size: 1.05rem
+        height: 3vh
+        line-height: 3vh
+        text-align: center            
 
-.fuelrow 
-    width: 35vw
-    height: 15vh
-    margin-left: 2vw
-    margin-top: 6vh
-    font-size: 2rem
-
-#economic1 
-    width: 80vw
-    height: 5vh
-    box-sizing: border-box
-    background-color: lightblue
-    border: 0.1vw solid black
-    text-align: center
-    justify-content: center
-    align-items: center
-    font-size: 2rem
-
-.compost
     &spreadsheetcategory
         width: calc(15vw - 8vh)
         height: 8vh
@@ -87,12 +69,7 @@ $photo5: "../static/images/upgrade5.webp"
     &titletexts 
         width: 40vw
         height: 4vh
-        font-size: 1.6rem
-        text-align: center
-
-    &faqtitletexts
-        width: 80vw
-        height: 4vh
+        line-height: 4vh
         font-size: 1.6rem
         text-align: center
 
@@ -146,46 +123,70 @@ $photo5: "../static/images/upgrade5.webp"
         flex-direction: row
         align-items: center
 
-
-#profitbutton 
-    width: 10vw
-    height: 4vh
-    margin-left: 1vw
-    font-size: 1.5rem
-    background: white
-    text-align: center
-    border: 0.1vw solid black 
-    box-sizing: border-box
-
-
-.compostprofit 
-    margin-left: 2vw
-    font-size: 1.05rem
-    height: 3vh
-    text-align: center            
-
-
-#composterForm 
-    display: flex
-    flex-direction: column
-    font-size: 3rem
+    &upgrade
+        &rectangle 
+            width: 80vw
+            height: 148vh
+            background-color: white
+            margin-bottom: 5vh
+            margin-top: 2vh
+        &title
+            width: 80vw
+            height: 10vh
+            line-height: 10vh
+            background-color: maroon
+            box-sizing: border-box
+            border: 0.1vw solid black
+            text-align: center
+            font-size: 4rem
 
 
-.upgradeinputs 
-    width: 35vw
-    height: 5vh
-    text-align: center
-    font-size: 2rem
+    &faq 
+        width: 80vw
+        height: 80vh
+        background: pink
+        border: 0.1vw solid black
+        box-sizing: border-box
+        margin-bottom: 2vh
+        display: flex
+        flex-direction: column
 
+        &titletexts
+            width: 80vw
+            height: 4vh
+            font-size: 1.6rem
+            text-align: center
+            box-sizing: border-box
 
-.compostfaq 
-    width: 80vw
-    height: 80vh
-    background: pink
-    border: 0.1vw solid black
-    box-sizing: border-box
-    margin-bottom: 2vh
+        &inbox
+            width: 80vw
+            height: 76vh
+            background: red
+            border: 0.1vw solid black
+            box-sizing: border-box
+            display: flex
+            flex-direction: row
 
+        &text 
+            width: 40vw
+            height: 76vh
+            line-height: 4vh
+            background-color: darkkhaki
+            box-sizing: border-box
+            border: 0.1vw solid black
+            font-size: 1.5rem
+            padding: 2vw
+
+        &photo
+            width: 40vw
+            height: 76vh
+            background-color: yellow
+            box-sizing: border-box
+            border: 0.1vw solid black
+            padding: 2vw
+            background-image: url("../static/images/composter.webp")
+            background-size: cover
+            background-repeat: no-repeat
 
 .upgraderow 
     width: 80vw
@@ -201,53 +202,38 @@ $photo5: "../static/images/upgrade5.webp"
         display: flex
         flex-direction: row
 
-
-.compostupgraderectangle 
-    width: 80vw
-    height: 148vh
-    background-color: white
-    margin-bottom: 5vh
-    margin-top: 2vh
-
-
-.compostupgradetitle 
-    width: 80vw
-    height: 10vh
-    background-color: maroon
-    box-sizing: border-box
-    border: 0.1vw solid black
-    text-align: center
-    font-size: 4rem
-
-
-.upgraderowmini 
-    width: 15vw
-    height: 5vh
-    line-height: 5vh
-    background-color: slateblue
-    text-align: center
-    border: 0.1vw solid black
-    box-sizing: border-box
-
-
-.upgraderowministart 
-    width: 5vw
-    height: 5vh
-    line-height: 5vh
-    background-color: chocolate
-    text-align: center
-    border: 0.1vw solid black
-    box-sizing: border-box
-
-    &big
-        width: 5vw
-        height: 8vh
-        line-height: 8vh
-        background-color: yellow
+    &mini 
+        width: 15vw
+        height: 5vh
+        line-height: 5vh
+        background-color: slateblue
         text-align: center
         border: 0.1vw solid black
         box-sizing: border-box
 
+        &start 
+            width: 5vw
+            height: 5vh
+            line-height: 5vh
+            background-color: chocolate
+            text-align: center
+            border: 0.1vw solid black
+            box-sizing: border-box
+
+            &big
+                width: 5vw
+                height: 8vh
+                line-height: 8vh
+                background-color: yellow
+                text-align: center
+                border: 0.1vw solid black
+                box-sizing: border-box
+
+.upgradeinputs 
+    width: 35vw
+    height: 5vh
+    text-align: center
+    font-size: 2rem
 
 .spreadsheettotal 
     width: 80vw
@@ -258,22 +244,49 @@ $photo5: "../static/images/upgrade5.webp"
     border: 0.1vw solid black
     box-sizing: border-box
 
+#composterForm 
+    display: flex
+    flex-direction: column
+    font-size: 3rem
 
-.compostfaqtext 
-    width: 80vw
-    height: 76vh
-    background-color: darkkhaki
+#profitbutton 
+    width: 10vw
+    height: 4vh
+    margin-left: 1vw
+    font-size: 1.5rem
+    background: white
+    text-align: center
+    border: 0.1vw solid black 
     box-sizing: border-box
+    cursor: pointer
+    &:hover
+        background-color: #cccccc
+
+.organicrow 
+    width: 35vw
+    height: 10vh
+    margin-left: 2vw
+    margin-top: 3vh
+    font-size: 1.5rem
+
+.fuelrow 
+    width: 35vw
+    height: 15vh
+    margin-left: 2vw
+    margin-top: 6vh
+    font-size: 2rem
+
+#economic1 
+    width: 80vw
+    height: 5vh
+    line-height: 5vh
+    box-sizing: border-box
+    background-color: lightblue
     border: 0.1vw solid black
-    font-size: 2.5rem
-    padding: 2vw
-
-
-.blue-text 
-    color: blue
-    font-weight: bold
-
+    text-align: center
+    justify-content: center
+    align-items: center
+    font-size: 2rem
 
 ::placeholder 
     color: rgba(0, 0, 0, 0.5) /* Adjust the alpha value (0 to 1) for transparency */
-
